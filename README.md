@@ -13,10 +13,6 @@ An exercise in responsive design with HTML5 canvas.
 
 [View the demo](https://sebsowter.github.io/cityverse/)
 
-## Design Reference
-
-[play.cityversetycoon.com](https://play.cityversetycoon.com/)
-
 ## Tasks
 
 Installation

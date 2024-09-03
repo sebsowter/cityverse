@@ -22,17 +22,16 @@ export class Coins extends Container {
     plus.x = (width - height) * 0.5;
 
     const style = new TextStyle({
-      fontFamily: "Arial",
       fontSize: 18,
     });
 
-    const text = new Text({
-      style,
-      text: "user: 1715600095720",
-    });
+    const text = this.addChild(
+      new Text({
+        style,
+        text: "user: 1715600095720",
+      })
+    );
     text.anchor.set(0.5);
     text.y = 48;
-
-    this.addChild(text);
   }
 }

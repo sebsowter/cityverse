@@ -9,7 +9,7 @@ export class City extends Sprite {
 
   resize(screenWidth: number, screenHeight: number) {
     const minScale = 0.2;
-    const maxScale = Math.max(minScale, Math.min(0.6, screenHeight / 1600));
+    const maxScale = Math.max(minScale, Math.min(0.6, screenHeight / 1280));
 
     this.position.set(screenWidth * 0.5, screenHeight * 0.55);
     this.scale.set(Math.min(maxScale, Math.max(minScale, screenWidth / 1080)));

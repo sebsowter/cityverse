@@ -11,10 +11,16 @@ export class Header extends Container {
   constructor() {
     super();
 
+    const y = 40;
+
     this.coins = new Coins();
+    this.coins.y = y;
     this.hamburger = new Hamburger();
+    this.hamburger.y = y;
     this.player = new Player();
+    this.player.y = y;
     this.shield = new Shield();
+    this.shield.y = y;
 
     this.addChild(this.coins);
     this.addChild(this.shield);
@@ -23,10 +29,9 @@ export class Header extends Container {
   }
 
   resize(screenWidth: number, _screenHeight: number) {
-    this.position.set(screenWidth * 0.5, 0);
-    this.hamburger.position.set(-screenWidth * 0.5 + 40, 40);
-    this.coins.position.set(0, 40);
-    this.player.position.set(-screenWidth * 0.5 + 88, 40);
-    this.shield.position.set(screenWidth * 0.5 - 40, 40);
+    this.x = screenWidth * 0.5;
+    this.hamburger.x = -screenWidth * 0.5 + 40;
+    this.player.x = -screenWidth * 0.5 + 88;
+    this.shield.x = screenWidth * 0.5 - 40;
   }
 }
