@@ -3,7 +3,7 @@
 ## Technical Stack
 
 - [pixi.js](https://pixijs.com/) (Renderer)
-- [@pixi/ui](https://pixijs.io/ui/) (Added for button elements)
+- [@pixi/ui](https://pixijs.io/ui/) (For UI components)
 - [Vite](https://vitejs.dev/) (Bundler)
 
 ## Demo
