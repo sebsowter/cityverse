@@ -31,8 +31,8 @@ export class Header extends Container {
     this.position.set(screenWidth * 0.5, 0);
     this.hamburger.position.set(-screenWidth * 0.5 + 40, 40);
     this.coins.position.set(0, isLarge ? 40 : 96);
-    this.player.position.set(isLarge ? -120 : -52, 40);
-    this.crown.position.set(isLarge ? 120 : 52, 40);
+    this.player.position.set(isLarge ? -128 : -52, 40);
+    this.crown.position.set(isLarge ? 128 : 52, 40);
     this.shield.position.set(screenWidth * 0.5 - 40, 40);
   }
 }

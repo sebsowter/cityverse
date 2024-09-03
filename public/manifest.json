@@ -40,6 +40,10 @@
           "src": "./assets/images/ui/home_icon.png"
         },
         {
+          "alias": "plus",
+          "src": "./assets/images/ui/plus.png"
+        },
+        {
           "alias": "news_icon",
           "src": "./assets/images/ui/news_icon.png"
         },
