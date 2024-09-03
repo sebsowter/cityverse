@@ -4,7 +4,6 @@ export * from "./Cloud";
 export * from "./Clouds";
 export * from "./Coins";
 export * from "./Controls";
-export * from "./Crown";
 export * from "./CtaButton";
 export * from "./Hamburger";
 export * from "./Header";

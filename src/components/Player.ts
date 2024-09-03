@@ -1,19 +1,10 @@
-import { Container, Graphics, Sprite } from "pixi.js";
+import { Sprite, Texture } from "pixi.js";
 
-export class Player extends Container {
+export class Player extends Sprite {
   constructor() {
-    super();
+    super(Texture.from("avatar"));
 
-    const width = 96;
-    const height = 48;
-
-    this.addChild(new Graphics())
-      .roundRect(-width * 0.5, -height * 0.5, width, height, height / 2)
-      .fill({ alpha: 0.25, color: 0x000000 });
-
-    const sprite = this.addChild(Sprite.from("avatar"));
-    sprite.setSize(44, 44);
-    sprite.anchor.set(0.5);
-    sprite.position.set(-width * 0.5 + height * 0.5, 0);
+    this.setSize(44, 44);
+    this.anchor.set(0.5);
   }
 }

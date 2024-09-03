@@ -28,13 +28,11 @@ export class Clouds extends Container {
     this.speed = speed;
     this.screenWidth = screenWidth;
 
-    this.createCloud(this.screenWidth * -0.75);
     this.createCloud(this.screenWidth * -0.5);
     this.createCloud(this.screenWidth * -0.25);
     this.createCloud(0);
     this.createCloud(this.screenWidth * 0.25);
     this.createCloud(this.screenWidth * 0.5);
-    this.createCloud(this.screenWidth * 0.75);
   }
 
   createCloud(x?: number) {
@@ -49,7 +47,7 @@ export class Clouds extends Container {
 
   resize(screenWidth: number, screenHeight: number) {
     this.screenWidth = screenWidth;
-    this.position.set(screenWidth * 0.5, screenHeight * 0.25);
+    this.position.set(screenWidth * 0.5, screenHeight * 0.2);
   }
 
   update(time: Ticker) {
@@ -65,7 +63,7 @@ export class Clouds extends Container {
       return true;
     });
 
-    if (this.clouds.length < 7) {
+    if (this.clouds.length < 5) {
       this.createCloud();
     }
   }

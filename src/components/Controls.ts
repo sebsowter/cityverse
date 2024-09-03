@@ -20,16 +20,16 @@ export class Controls extends Container {
   }
 
   resize(screenWidth: number, screenHeight: number) {
-    const isLarge = screenWidth > 360;
     const minScale = 0.8;
     const maxScale = Math.max(minScale, Math.min(1.2, screenHeight / 640));
 
-    this.position.set(screenWidth * 0.5, screenHeight - (screenHeight > 480 ? 32 : 16));
-    this.leftButton.position.set(isLarge ? -144 : -screenWidth * 0.5 + 32, 0);
+    this.position.set(screenWidth * 0.5, screenHeight);
+    this.leftButton.position.set(-screenWidth * 0.5 + 80, -32);
     this.leftButton.scale.set(0.75);
-    this.rightButton.position.set(isLarge ? 144 : screenWidth * 0.5 - 32, 0);
+    this.rightButton.position.set(screenWidth * 0.5 - 80, -32);
     this.rightButton.scale.set(0.75);
     this.ctaButton.scale.set(0.5);
-    this.scale.set(Math.min(maxScale, Math.max(minScale, screenWidth / 400)));
+    //this.ctaButton.y = screenHeight;
+    //this.scale.set(Math.min(maxScale, Math.max(minScale, screenWidth / 400)));
   }
 }

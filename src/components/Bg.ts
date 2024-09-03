@@ -1,19 +1,16 @@
-import { FillGradient, Graphics } from "pixi.js";
+import { Sprite, Texture } from "pixi.js";
 
-const colorStops = [0x2466aa, 0x91b3dd, 0x2466aa];
+export class Bg extends Sprite {
+  constructor() {
+    super(Texture.from("bg"));
 
-function gradient(height: number) {
-  const gradientFill = new FillGradient(0, 0, 0, height);
+    this.anchor.set(0, 1);
+  }
 
-  colorStops.forEach((number, index) => {
-    gradientFill.addColorStop(index / colorStops.length, number);
-  });
-
-  return gradientFill;
-}
-
-export class Bg extends Graphics {
   resize(screenWidth: number, screenHeight: number) {
-    this.clear().rect(0, 0, screenWidth, screenHeight).fill(gradient(screenHeight));
+    const scale = screenWidth / 1200;
+
+    this.y = screenHeight;
+    this.scale.set(scale);
   }
 }
