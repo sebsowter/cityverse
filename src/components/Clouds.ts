@@ -9,7 +9,7 @@ function randomTexture() {
 }
 
 function randomOffsetY() {
-  return -64 + Math.random() * 128;
+  return -128 + Math.random() * 256;
 }
 
 function randomOffsetSpeed() {
@@ -47,7 +47,7 @@ export class Clouds extends Container {
 
   resize(screenWidth: number, screenHeight: number) {
     this.screenWidth = screenWidth;
-    this.position.set(screenWidth * 0.5, screenHeight * 0.2);
+    this.position.set(screenWidth * 0.5, screenHeight * 0.25);
   }
 
   update(time: Ticker) {
