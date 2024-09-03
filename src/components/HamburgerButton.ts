@@ -1,19 +1,14 @@
 import { Button } from "@pixi/ui";
-import { Container, DestroyOptions, Sprite } from "pixi.js";
+import { Sprite, Texture } from "pixi.js";
 
-export class HamburgerButton extends Container {
+export class HamburgerButton extends Sprite {
   constructor() {
-    super();
+    super(Texture.from("hamburger"));
+
+    this.anchor.set(0.5);
+    this.scale.set(0.6);
 
     const button = new Button(this);
-    button.onPress.connect(() => console.log("onPress"));
-
-    const sprite = this.addChild(Sprite.from("./assets/images/ui/top/hamburger_button.png"));
-    sprite.anchor.set(0.5);
-    sprite.scale.set(0.5);
-  }
-
-  onResize(screenWidth: number, screenHeight: number) {
-    // this.position.set(32, 32);
+    button.onPress.connect(() => console.log("Click hamburger"));
   }
 }

@@ -1,0 +1,67 @@
+{
+  "bundles": [
+    {
+      "name": "header",
+      "assets": [
+        {
+          "alias": "avatar",
+          "src": "./assets/images/ui/avatar.png"
+        },
+        {
+          "alias": "coin",
+          "src": "./assets/images/ui/coin.png"
+        },
+        {
+          "alias": "hamburger",
+          "src": "./assets/images/ui/hamburger_button.png"
+        },
+        {
+          "alias": "shield",
+          "src": "./assets/images/ui/shield.png"
+        }
+      ]
+    },
+    {
+      "name": "controls",
+      "assets": [
+        {
+          "alias": "button_cta",
+          "src": "./assets/images/ui/button_cta.png"
+        },
+        {
+          "alias": "button_left",
+          "src": "./assets/images/ui/button_left.png"
+        },
+        {
+          "alias": "button_right",
+          "src": "./assets/images/ui/button_right.png"
+        },
+        {
+          "alias": "button_dice_icon",
+          "src": "./assets/images/ui/button_dice_icon.png"
+        },
+        {
+          "alias": "home_icon",
+          "src": "./assets/images/ui/home_icon.png"
+        },
+        {
+          "alias": "news_icon",
+          "src": "./assets/images/ui/news_icon.png"
+        }
+      ]
+    },
+    {
+      "name": "scene",
+      "assets": [
+        {
+          "alias": "bg",
+          "src": "./assets/images/bg.png"
+        },
+        {
+          "alias": "city",
+          "src": "./assets/images/city.png"
+        }
+      ]
+    }
+  ]
+}

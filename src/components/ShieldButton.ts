@@ -1,19 +1,14 @@
 import { Button } from "@pixi/ui";
-import { Container, DestroyOptions, Sprite } from "pixi.js";
+import { Sprite, Texture } from "pixi.js";
 
-export class ShieldButton extends Container {
+export class ShieldButton extends Sprite {
   constructor() {
-    super();
+    super(Texture.from("shield"));
 
-    const sprite = this.addChild(Sprite.from("./assets/images/ui/shield.png"));
-    sprite.anchor.set(0.5);
-    sprite.scale.set(0.5);
+    this.anchor.set(0.5);
+    this.scale.set(0.6);
 
     const button = new Button(this);
-    button.onPress.connect(() => console.log("onPress"));
-  }
-
-  onResize(screenWidth: number, screenHeight: number) {
-    // this.position.set(screenWidth - 32, 32);
+    button.onPress.connect(() => console.log("Click shield"));
   }
 }

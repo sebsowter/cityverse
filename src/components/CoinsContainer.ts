@@ -5,21 +5,15 @@ export class CoinsContainer extends Container {
     super();
 
     const width = 128;
-    const height = 40;
+    const height = 48;
 
-    const graphics = new Graphics();
-    graphics.roundRect(-width * 0.5, -height * 0.5, width, height, height / 2).fill({ alpha: 0.5, color: 0x000000 });
+    this.addChild(new Graphics())
+      .roundRect(-width * 0.5, -height * 0.5, width, height, height * 0.5)
+      .fill({ alpha: 0.25, color: 0x000000 });
 
-    const sprite = this.addChild(Sprite.from("./assets/images/ui/coin.png"));
+    const sprite = this.addChild(Sprite.from("coin"));
     sprite.anchor.set(0.5);
-    sprite.setSize(36, 36);
+    sprite.setSize(40, 40);
     sprite.position.set(-width * 0.5 + height * 0.5, 0);
-
-    this.addChild(graphics);
-    this.addChild(sprite);
-  }
-
-  onResize(screenWidth: number, _screenHeight: number) {
-    //  this.position.set(screenWidth * 0.5, 32);
   }
 }

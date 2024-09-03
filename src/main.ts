@@ -1,61 +1,76 @@
 import { Application, Assets } from "pixi.js";
 
-import { BaseContainer, BgSprite, CitySprite, ControlsContainer, HeaderContainer } from "./components";
+import { BgGraphics, CitySprite, Clouds, ControlsContainer, HeaderContainer } from "./components";
 
 (async () => {
   const app = new Application();
 
-  const components: BaseContainer[] = [];
-
   await app.init({
-    width: 640,
-    height: 360,
     backgroundColor: 0x2467aa,
-    resolution: 1,
+    resizeTo: window,
   });
 
   document.body.appendChild(app.canvas);
 
-  console.log("---", window.devicePixelRatio);
-
-  Assets.addBundle("ui", {
-    avatar: "./assets/images/ui/avatar.png",
-    bg: "./assets/images/bg.png",
+  Assets.addBundle("controls", {
     button_cta: "./assets/images/ui/button_cta.png",
     button_dice_icon: "./assets/images/ui/button_dice_icon.png",
     button_left: "./assets/images/ui/button_left.png",
     button_right: "./assets/images/ui/button_right.png",
-    city: "./assets/images/city.png",
-    coin: "./assets/images/ui/coin.png",
-    hamburger_button: "./assets/images/ui/top/hamburger_button.png",
     home_icon: "./assets/images/ui/home_icon.png",
     news_icon: "./assets/images/ui/news_icon.png",
+  });
+
+  Assets.addBundle("header", {
+    avatar: "./assets/images/ui/avatar.png",
+    coin: "./assets/images/ui/coin.png",
+    hamburger: "./assets/images/ui/hamburger_button.png",
     shield: "./assets/images/ui/shield.png",
   });
 
-  const assets = await Assets.loadBundle("ui");
+  Assets.addBundle("scene", {
+    bg: "./assets/images/bg.png",
+    city: "./assets/images/city.png",
+    cloud1: "./assets/images/cloud.png",
+    cloud2: "./assets/images/cloud2.png",
+    cloud3: "./assets/images/cloud3.png",
+  });
 
-  const bgSprite = new BgSprite();
+  await Assets.loadBundle("controls");
+  await Assets.loadBundle("header");
+  await Assets.loadBundle("scene");
+  // await Assets.init({ manifest: "./manifest.json" });
+
+  const bg = new BgGraphics();
   const city = new CitySprite();
   const controls = new ControlsContainer();
   const header = new HeaderContainer();
+  const clouds1 = new Clouds(app.renderer.width, 0.25);
+  clouds1.alpha = 0.5;
+  const clouds2 = new Clouds(app.renderer.width, 0.5);
 
-  app.stage.addChild(bgSprite);
+  app.stage.addChild(bg);
+  app.stage.addChild(clouds1);
+  app.stage.addChild(clouds2);
   app.stage.addChild(city);
   app.stage.addChild(controls);
   app.stage.addChild(header);
 
-  const onResize = () => {
-    if (app) {
-      app.renderer.resize(window.innerWidth, window.innerHeight);
-      bgSprite.onResize(window.innerWidth, window.innerHeight);
-      city.onResize(window.innerWidth, window.innerHeight);
-      controls.onResize(window.innerWidth, window.innerHeight);
-      header.onResize(window.innerWidth, window.innerHeight);
-    }
-  };
+  function onResize(screenWidth: number, screenHeight: number, _resolution: number) {
+    bg.resize(screenWidth, screenHeight);
+    clouds1.resize(screenWidth, screenHeight);
+    clouds2.resize(screenWidth, screenHeight);
+    city.resize(screenWidth, screenHeight);
+    controls.resize(screenWidth, screenHeight);
+    header.resize(screenWidth, screenHeight);
+  }
 
-  window.addEventListener("resize", onResize);
+  app.ticker.add((time) => {
+    clouds1.update(time);
+    clouds2.update(time);
+  });
 
-  onResize();
+  app.renderer.on("resize", onResize);
+
+  onResize(app.renderer.width, app.renderer.height, app.renderer.resolution);
 })();

@@ -5,15 +5,14 @@ export class LeftButton extends Container {
   constructor() {
     super();
 
-    const sprite = this.addChild(Sprite.from("./assets/images/ui/button_left.png"));
+    const sprite = this.addChild(Sprite.from("button_left"));
     sprite.anchor.set(0.5, 1);
-    sprite.scale.set(0.8);
+    sprite.scale.set(0.75);
 
-    const icon = this.addChild(Sprite.from("./assets/images/ui/home_icon.png"));
+    const icon = this.addChild(Sprite.from("home_icon"));
     icon.anchor.set(0.5, 1);
-    //icon.scale.set(0.5);
     icon.position.set(0, -32);
-    icon.scale.set(1);
+    icon.scale.set(0.9);
 
     const button = new Button(this);
     button.onPress.connect(() => console.log("onPress"));
