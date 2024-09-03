@@ -1,10 +1,10 @@
 # CityVerse
 
-## Technical stack
+## Technical Stack
 
-- [Vite](https://vitejs.dev/) (Bundler)
 - [pixi.js](https://pixijs.com/) (Renderer)
 - [@pixi/ui](https://pixijs.io/ui/) (Added for button elements)
+- [Vite](https://vitejs.dev/) (Bundler)
 
 ## Demo
 
