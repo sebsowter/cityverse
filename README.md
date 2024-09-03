@@ -1,5 +1,7 @@
 # CityVerse
 
+An exercise in responsive design with HTML5 canvas.
+
 ## Technical Stack
 
 - [TypeScript](https://www.typescriptlang.org/) (Language)
