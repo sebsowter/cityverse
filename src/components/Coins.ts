@@ -32,6 +32,6 @@ export class Coins extends Container {
       })
     );
     text.anchor.set(0.5);
-    text.y = 48;
+    text.y = 40;
   }
 }
