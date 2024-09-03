@@ -12,7 +12,7 @@ export class RightButton extends Container {
     const icon = this.addChild(Sprite.from("news_icon"));
     icon.blendMode = "screen";
     icon.anchor.set(0.5, 1);
-    icon.position.set(0, -36);
+    icon.position.set(0, -30);
     icon.scale.set(0.75);
 
     const button = new Button(this);
