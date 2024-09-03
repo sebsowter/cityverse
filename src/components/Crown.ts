@@ -1,6 +1,6 @@
 import { Container, Graphics, Sprite } from "pixi.js";
 
-export class PlayerContainer extends Container {
+export class Crown extends Container {
   constructor() {
     super();
 
@@ -11,9 +11,9 @@ export class PlayerContainer extends Container {
       .roundRect(-width * 0.5, -height * 0.5, width, height, height / 2)
       .fill({ alpha: 0.25, color: 0x000000 });
 
-    const sprite = this.addChild(Sprite.from("avatar"));
-    sprite.anchor.set(0.5);
+    const sprite = this.addChild(Sprite.from("crown"));
     sprite.setSize(40, 40);
+    sprite.anchor.set(0.5);
     sprite.position.set(-width * 0.5 + height * 0.5, 0);
   }
 }

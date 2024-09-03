@@ -1,6 +1,6 @@
 import { Sprite, Texture } from "pixi.js";
 
-export class CitySprite extends Sprite {
+export class City extends Sprite {
   constructor() {
     super(Texture.from("city"));
 

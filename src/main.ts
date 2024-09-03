@@ -1,6 +1,6 @@
 import { Application, Assets } from "pixi.js";
 
-import { BgGraphics, CitySprite, Clouds, ControlsContainer, HeaderContainer } from "./components";
+import { Bg, City, Clouds, Controls, Header } from "./components";
 
 (async () => {
   const app = new Application();
@@ -12,39 +12,15 @@ import { BgGraphics, CitySprite, Clouds, ControlsContainer, HeaderContainer } fr
 
   document.body.appendChild(app.canvas);
 
-  Assets.addBundle("controls", {
-    button_cta: "./assets/images/ui/button_cta.png",
-    button_dice_icon: "./assets/images/ui/button_dice_icon.png",
-    button_left: "./assets/images/ui/button_left.png",
-    button_right: "./assets/images/ui/button_right.png",
-    home_icon: "./assets/images/ui/home_icon.png",
-    news_icon: "./assets/images/ui/news_icon.png",
-  });
-
-  Assets.addBundle("header", {
-    avatar: "./assets/images/ui/avatar.png",
-    coin: "./assets/images/ui/coin.png",
-    hamburger: "./assets/images/ui/hamburger_button.png",
-    shield: "./assets/images/ui/shield.png",
-  });
-
-  Assets.addBundle("scene", {
-    bg: "./assets/images/bg.png",
-    city: "./assets/images/city.png",
-    cloud1: "./assets/images/cloud.png",
-    cloud2: "./assets/images/cloud2.png",
-    cloud3: "./assets/images/cloud3.png",
-  });
-
-  await Assets.loadBundle("controls");
+  await Assets.init({ manifest: "./manifest.json" });
   await Assets.loadBundle("header");
+  await Assets.loadBundle("controls");
   await Assets.loadBundle("scene");
-  // await Assets.init({ manifest: "./manifest.json" });
 
-  const bg = new BgGraphics();
-  const city = new CitySprite();
-  const controls = new ControlsContainer();
-  const header = new HeaderContainer();
+  const bg = new Bg();
+  const city = new City();
+  const controls = new Controls();
+  const header = new Header();
   const clouds1 = new Clouds(app.renderer.width, 0.25);
   clouds1.alpha = 0.5;
   const clouds2 = new Clouds(app.renderer.width, 0.5);
@@ -56,6 +32,11 @@ import { BgGraphics, CitySprite, Clouds, ControlsContainer, HeaderContainer } fr
   app.stage.addChild(controls);
   app.stage.addChild(header);
 
+  app.ticker.add((time) => {
+    clouds1.update(time);
+    clouds2.update(time);
+  });
+
   function onResize(screenWidth: number, screenHeight: number, _resolution: number) {
     bg.resize(screenWidth, screenHeight);
     clouds1.resize(screenWidth, screenHeight);
@@ -64,11 +45,6 @@ import { BgGraphics, CitySprite, Clouds, ControlsContainer, HeaderContainer } fr
     controls.resize(screenWidth, screenHeight);
     header.resize(screenWidth, screenHeight);
   }
-
-  app.ticker.add((time) => {
-    clouds1.update(time);
-    clouds2.update(time);
-  });
 
   app.renderer.on("resize", onResize);
 

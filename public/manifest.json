@@ -12,6 +12,10 @@
           "src": "./assets/images/ui/coin.png"
         },
         {
+          "alias": "crown",
+          "src": "./assets/images/ui/crown.png"
+        },
+        {
           "alias": "hamburger",
           "src": "./assets/images/ui/hamburger_button.png"
         },
@@ -37,8 +41,8 @@
           "src": "./assets/images/ui/button_right.png"
         },
         {
-          "alias": "button_dice_icon",
-          "src": "./assets/images/ui/button_dice_icon.png"
+          "alias": "dice_icon",
+          "src": "./assets/images/ui/dice_icon.png"
         },
         {
           "alias": "home_icon",
@@ -54,12 +58,20 @@
       "name": "scene",
       "assets": [
         {
-          "alias": "bg",
-          "src": "./assets/images/bg.png"
-        },
-        {
           "alias": "city",
           "src": "./assets/images/city.png"
+        },
+        {
+          "alias": "cloud1",
+          "src": "./assets/images/cloud.png"
+        },
+        {
+          "alias": "cloud2",
+          "src": "./assets/images/cloud2.png"
+        },
+        {
+          "alias": "cloud3",
+          "src": "./assets/images/cloud3.png"
         }
       ]
     }

@@ -1,7 +1,7 @@
 import { Button } from "@pixi/ui";
 import { Sprite, Texture } from "pixi.js";
 
-export class ShieldButton extends Sprite {
+export class Shield extends Sprite {
   constructor() {
     super(Texture.from("shield"));
 

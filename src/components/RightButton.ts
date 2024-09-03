@@ -10,11 +10,12 @@ export class RightButton extends Container {
     sprite.scale.set(0.75);
 
     const icon = this.addChild(Sprite.from("news_icon"));
+    icon.blendMode = "screen";
     icon.anchor.set(0.5, 1);
     icon.position.set(0, -32);
     icon.scale.set(0.9);
 
     const button = new Button(this);
-    button.onPress.connect(() => console.log("onPress"));
+    button.onPress.connect(() => console.log("Click news"));
   }
 }

@@ -12,7 +12,7 @@ function gradient(height: number) {
   return gradientFill;
 }
 
-export class BgGraphics extends Graphics {
+export class Bg extends Graphics {
   resize(screenWidth: number, screenHeight: number) {
     this.clear().rect(0, 0, screenWidth, screenHeight).fill(gradient(screenHeight));
   }
