@@ -13,8 +13,7 @@ import { Bg, City, Clouds, Controls, Header } from "./components";
   document.body.appendChild(app.canvas);
 
   await Assets.init({ manifest: "./manifest.json" });
-  await Assets.loadBundle("header");
-  await Assets.loadBundle("controls");
+  await Assets.loadBundle("ui");
   await Assets.loadBundle("scene");
 
   const bg = new Bg();
