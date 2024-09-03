@@ -2,6 +2,7 @@
 
 ## Technical Stack
 
+- [TypeScript](https://www.typescriptlang.org/) (Language)
 - [pixi.js](https://pixijs.com/) (Renderer)
 - [@pixi/ui](https://pixijs.io/ui/) (For UI components)
 - [Vite](https://vitejs.dev/) (Bundler)
