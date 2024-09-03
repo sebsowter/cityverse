@@ -22,7 +22,7 @@ export class Controls extends Container {
   resize(screenWidth: number, screenHeight: number) {
     const isLarge = screenWidth > 360;
     const minScale = 0.8;
-    const maxScale = Math.max(minScale, Math.min(1.2, screenHeight / 480));
+    const maxScale = Math.max(minScale, Math.min(1.2, screenHeight / 640));
 
     this.position.set(screenWidth * 0.5, screenHeight - (screenHeight > 480 ? 32 : 16));
     this.leftButton.position.set(isLarge ? -144 : -screenWidth * 0.5 + 32, 0);
