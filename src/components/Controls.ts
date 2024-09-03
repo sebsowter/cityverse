@@ -23,7 +23,7 @@ export class Controls extends Container {
 
   resize(screenWidth: number, screenHeight: number) {
     const minScale = 0.6;
-    const maxScale = Math.max(minScale, Math.min(1.2, screenHeight / 600));
+    const maxScale = Math.max(minScale, Math.min(1, screenHeight / 600));
     const scale = Math.min(maxScale, Math.max(minScale, screenWidth / 400));
 
     this.position.set(screenWidth * 0.5, screenHeight);
