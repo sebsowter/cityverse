@@ -1,33 +1,12 @@
 {
   "bundles": [
     {
-      "name": "header",
+      "name": "ui",
       "assets": [
         {
           "alias": "avatar",
           "src": "./assets/images/ui/avatar.png"
         },
-        {
-          "alias": "coin",
-          "src": "./assets/images/ui/coin.png"
-        },
-        {
-          "alias": "crown",
-          "src": "./assets/images/ui/crown.png"
-        },
-        {
-          "alias": "hamburger",
-          "src": "./assets/images/ui/hamburger_button.png"
-        },
-        {
-          "alias": "shield",
-          "src": "./assets/images/ui/shield.png"
-        }
-      ]
-    },
-    {
-      "name": "controls",
-      "assets": [
         {
           "alias": "button_cta",
           "src": "./assets/images/ui/button_cta.png"
@@ -41,16 +20,36 @@
           "src": "./assets/images/ui/button_right.png"
         },
         {
+          "alias": "coin",
+          "src": "./assets/images/ui/coin.png"
+        },
+        {
+          "alias": "crown",
+          "src": "./assets/images/ui/crown.png"
+        },
+        {
           "alias": "dice_icon",
           "src": "./assets/images/ui/dice_icon.png"
+        },
+        {
+          "alias": "hamburger",
+          "src": "./assets/images/ui/hamburger_button.png"
         },
         {
           "alias": "home_icon",
           "src": "./assets/images/ui/home_icon.png"
         },
         {
+          "alias": "plus",
+          "src": "./assets/images/ui/plus.png"
+        },
+        {
           "alias": "news_icon",
           "src": "./assets/images/ui/news_icon.png"
+        },
+        {
+          "alias": "shield",
+          "src": "./assets/images/ui/shield.png"
         }
       ]
     },
@@ -59,19 +58,19 @@
       "assets": [
         {
           "alias": "city",
-          "src": "./assets/images/city.png"
+          "src": "./assets/images/scene/city.png"
         },
         {
           "alias": "cloud1",
-          "src": "./assets/images/cloud.png"
+          "src": "./assets/images/scene/cloud.png"
         },
         {
           "alias": "cloud2",
-          "src": "./assets/images/cloud2.png"
+          "src": "./assets/images/scene/cloud2.png"
         },
         {
           "alias": "cloud3",
-          "src": "./assets/images/cloud3.png"
+          "src": "./assets/images/scene/cloud3.png"
         }
       ]
     }
