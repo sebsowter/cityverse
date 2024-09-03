@@ -6,7 +6,7 @@ export class Shield extends Sprite {
     super(Texture.from("shield"));
 
     this.anchor.set(0.5);
-    this.scale.set(0.6);
+    this.scale.set(0.5);
 
     const button = new Button(this);
     button.onPress.connect(() => console.log("Click shield"));

@@ -6,7 +6,7 @@ export class Hamburger extends Sprite {
     super(Texture.from("hamburger"));
 
     this.anchor.set(0.5);
-    this.scale.set(0.6);
+    this.scale.set(0.5);
 
     const button = new Button(this);
     button.onPress.connect(() => console.log("Click hamburger"));
