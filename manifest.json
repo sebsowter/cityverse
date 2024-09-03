@@ -8,6 +8,10 @@
           "src": "./assets/images/ui/avatar.png"
         },
         {
+          "alias": "bot",
+          "src": "./assets/images/ui/bot.png"
+        },
+        {
           "alias": "button_cta",
           "src": "./assets/images/ui/button_cta.png"
         },
@@ -24,8 +28,8 @@
           "src": "./assets/images/ui/coin.png"
         },
         {
-          "alias": "crown",
-          "src": "./assets/images/ui/crown.png"
+          "alias": "coin_bg",
+          "src": "./assets/images/ui/coin_bg.png"
         },
         {
           "alias": "dice_icon",
@@ -38,6 +42,10 @@
         {
           "alias": "home_icon",
           "src": "./assets/images/ui/home_icon.png"
+        },
+        {
+          "alias": "light",
+          "src": "./assets/images/ui/light.png"
         },
         {
           "alias": "plus",
@@ -56,6 +64,10 @@
     {
       "name": "scene",
       "assets": [
+        {
+          "alias": "bg",
+          "src": "./assets/images/scene/bg.png"
+        },
         {
           "alias": "city",
           "src": "./assets/images/scene/city.png"
