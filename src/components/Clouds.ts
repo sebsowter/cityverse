@@ -9,7 +9,7 @@ function randomTexture() {
 }
 
 function randomOffsetY() {
-  return -128 + Math.random() * 256;
+  return -64 + Math.random() * 128;
 }
 
 function randomOffsetSpeed() {
