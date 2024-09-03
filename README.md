@@ -1,0 +1,7 @@
+# CityVerse
+
+## Installation
+
+```
+npm i
+```
