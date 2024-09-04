@@ -29,9 +29,11 @@ export class Header extends Container {
   }
 
   resize(screenWidth: number, _screenHeight: number) {
+    const isLarge = screenWidth > 960;
+
     this.x = screenWidth * 0.5;
-    this.hamburger.x = -screenWidth * 0.5 + 40;
-    this.player.x = -screenWidth * 0.5 + 88;
-    this.shield.x = screenWidth * 0.5 - 40;
+    this.hamburger.x = -screenWidth * 0.5 + (isLarge ? 40 : 24);
+    this.player.x = -screenWidth * 0.5 + (isLarge ? 88 : 64);
+    this.shield.x = screenWidth * 0.5 - (isLarge ? 40 : 24);
   }
 }
