@@ -27,9 +27,9 @@ export class Controls extends Container {
     const scale = Math.min(maxScale, Math.max(minScale, screenWidth / 520));
 
     this.position.set(screenWidth * 0.5, screenHeight);
-    this.leftButton.position.set(-screenWidth * 0.5 + 100 * scale, scale * -32);
+    this.leftButton.position.set(-screenWidth * 0.5 + 100 * scale, scale * -24);
     this.leftButton.scale.set(scale);
-    this.rightButton.position.set(screenWidth * 0.5 - 100 * scale, scale * -32);
+    this.rightButton.position.set(screenWidth * 0.5 - 100 * scale, scale * -24);
     this.rightButton.scale.set(scale);
     this.cta.scale.set(scale);
   }
