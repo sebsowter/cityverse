@@ -32,8 +32,8 @@ export class Header extends Container {
     const isLarge = screenWidth > 480;
 
     this.x = screenWidth * 0.5;
-    this.hamburger.x = -screenWidth * 0.5 + (isLarge ? 40 : 24);
-    this.player.x = -screenWidth * 0.5 + (isLarge ? 88 : 64);
-    this.shield.x = screenWidth * 0.5 - (isLarge ? 40 : 24);
+    this.hamburger.x = -screenWidth * 0.5 + (isLarge ? 40 : screenWidth * 0.07);
+    this.player.x = -screenWidth * 0.5 + (isLarge ? 88 : screenWidth * 0.07 + 40);
+    this.shield.x = screenWidth * 0.5 - (isLarge ? 40 : screenWidth * 0.07);
   }
 }
