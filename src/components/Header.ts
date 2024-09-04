@@ -28,12 +28,14 @@ export class Header extends Container {
     this.addChild(this.hamburger);
   }
 
-  resize(screenWidth: number, _screenHeight: number) {
+  resize(screenWidth: number, screenHeight: number) {
     const isLarge = screenWidth > 480;
+    const y = screenHeight > 400 ? 40 : 28;
 
     this.x = screenWidth * 0.5;
-    this.hamburger.x = -screenWidth * 0.5 + (isLarge ? 40 : screenWidth * 0.07);
-    this.player.x = -screenWidth * 0.5 + (isLarge ? 88 : screenWidth * 0.07 + 40);
-    this.shield.x = screenWidth * 0.5 - (isLarge ? 40 : screenWidth * 0.07);
+    this.coins.y = y;
+    this.hamburger.position.set(-screenWidth * 0.5 + (isLarge ? 40 : screenWidth * 0.07), y);
+    this.player.position.set(-screenWidth * 0.5 + (isLarge ? 88 : screenWidth * 0.07 + 40), y);
+    this.shield.position.set(screenWidth * 0.5 - (isLarge ? 40 : screenWidth * 0.07), y);
   }
 }
