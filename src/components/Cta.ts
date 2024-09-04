@@ -10,6 +10,7 @@ export class Cta extends Container {
     bg.blendMode = "screen";
     bg.anchor.set(0.5, 1);
     bg.scale.set(0.7);
+    bg.x = 4;
 
     const light = this.addChild(Sprite.from("light"));
     light.blendMode = "screen";

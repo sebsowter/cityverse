@@ -23,8 +23,8 @@ export class Controls extends Container {
 
   resize(screenWidth: number, screenHeight: number) {
     const minScale = 0.6;
-    const maxScale = Math.max(minScale, Math.min(1, screenHeight / 920));
-    const scale = Math.min(maxScale, Math.max(minScale, screenWidth / 400));
+    const maxScale = Math.max(minScale, Math.min(1, screenHeight / 480));
+    const scale = Math.min(maxScale, Math.max(minScale, screenWidth / 520));
 
     this.position.set(screenWidth * 0.5, screenHeight);
     this.leftButton.x = -screenWidth * 0.5 + 100 * scale;

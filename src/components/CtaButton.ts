@@ -8,7 +8,6 @@ export class CtaButton extends Container {
     const sprite = this.addChild(Sprite.from("button_cta"));
     sprite.anchor.set(0.5);
     sprite.scale.set(0.5);
-    sprite.x = -4;
 
     const icon = this.addChild(Sprite.from("dice_icon"));
     icon.blendMode = "screen";
