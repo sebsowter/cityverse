@@ -29,7 +29,7 @@ export class Header extends Container {
   }
 
   resize(screenWidth: number, _screenHeight: number) {
-    const isLarge = screenWidth > 960;
+    const isLarge = screenWidth > 480;
 
     this.x = screenWidth * 0.5;
     this.hamburger.x = -screenWidth * 0.5 + (isLarge ? 40 : 24);
