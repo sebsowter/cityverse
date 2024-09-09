@@ -51,20 +51,12 @@ export class Clouds extends Container {
   }
 
   update(time: Ticker) {
-    this.clouds = this.clouds.filter((cloud) => {
+    this.clouds.forEach((cloud) => {
       cloud.x -= cloud.speed * time.deltaTime;
 
       if (cloud.x < -(this.screenWidth + cloud.width) * 0.5) {
-        cloud.destroy();
-
-        return false;
+        cloud.x = (this.screenWidth + cloud.width) * 0.5;
       }
-
-      return true;
     });
-
-    if (this.clouds.length < 5) {
-      this.createCloud();
-    }
   }
 }
